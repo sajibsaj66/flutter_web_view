@@ -12,7 +12,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   WebViewController controller = WebViewController()
   ..setJavaScriptMode(JavaScriptMode.unrestricted)
-  ..loadRequest(Uri.parse("https://chat.openai.com/"))
+  ..loadRequest(Uri.parse("https://thesoumiscanproductbd.com/"))
   ;
 
   @override
