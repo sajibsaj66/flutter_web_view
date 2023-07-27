@@ -10,19 +10,16 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  WebViewController? _controller;
+  WebViewController controller = WebViewController()
+  ..setJavaScriptMode(JavaScriptMode.unrestricted)
+  ..loadRequest(Uri.parse("https://thesoumiscanproductbd.com/"))
+  ;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: WebView(
-          initialUrl: 'https://wesetupit.beiizetu.com',
-          javascriptMode: JavascriptMode.unrestricted,
-          onWebViewCreated: (WebViewController controller) {
-            _controller = controller;
-          },
-        ),
+        child: WebViewWidget(controller: controller)
       ),
     );
   }
