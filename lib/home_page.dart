@@ -11,7 +11,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final WebViewController _controller = WebViewController()
     ..setJavaScriptMode(JavaScriptMode.unrestricted)
-    ..loadRequest(Uri.parse("https://www.deshit-bd.com/"));
+    ..loadRequest(Uri.parse("https://thesoumiscanproductbd.com/"));
 
   @override
   Widget build(BuildContext context) {
