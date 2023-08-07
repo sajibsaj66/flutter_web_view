@@ -53,8 +53,8 @@ class _HomePageState extends State<HomePage> {
   // Function to open external URLs
   void _launchExternalURL(String url) async {
     try {
-      if (await canLaunchUrl(Uri.parse(url))) {
-        await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
+      if (await canLaunch(url)) {
+        await launch(url);
       } else {
         throw 'Could not launch $url';
       }
@@ -62,7 +62,6 @@ class _HomePageState extends State<HomePage> {
       print('Error launching URL: $e');
     }
   }
-
 
   // Function to initiate a phone call
   void _launchPhoneCall(String phoneNumber) async {
